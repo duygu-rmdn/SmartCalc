@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="numSistems.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="logo">SmartCalc</h1>
+
+  <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="index.html"><li>Home</li></a>
+          <a href="./calculator.html"><li>Standart calculator</li></a>
+          <a href="#"><li>Graphic calculator</li></a>
+          <a href="./numSistems.html"><li>Number systems calculator</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper">
+        <div class="container">
+          <div class="card">
+            <form name="convertor" id="convertor">
+              <div class="form-group">
+                <label for="base">Enter Base/Radix</label>
+              </div>
+              <div >
+              <select id="base" list="radix" >
+                              <option value="2">2(Binary)</option>
+                              <option value="8">8(Octal)</option>
+                              <option value="10">10(Decimal)</option>
+                              <option value="16">16(HexaDecimal)</option>
+                          </select>
+                          </div>
+              <div class="form-group">
+                <label for="num">Enter Number</label>
+              </div>
+              <input type="text" id="num" />
+              <div class="form-group">
+                <button type="button" onclick="calculate('2')">Binary</button>
+                <button type="button" onclick="calculate('8')">Octal</button>
+                <button type="button" onclick="calculate('10')">Decimal</button>
+                <button type="button" onclick="calculate('16')">Hexadecimal</button>
+              </div>
+              <div class="out">
+                Output: <output name="result" id="result"></output>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="numSistems.js"></script>
+</body>
+</html>
