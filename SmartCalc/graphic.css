@@ -3,6 +3,15 @@ body {
     padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
 }
+
+.bg{
+  background-image: url("https://t3.ftcdn.net/jpg/02/94/19/98/240_F_294199808_iVKkhLOnlSyGFnBXf15sFx9LEW6gF9en.jpg");
+  height:100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #logo {
     margin: 0px;
     padding: 10px 80px;
