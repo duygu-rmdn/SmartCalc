@@ -1,7 +1,15 @@
+
+.bg{
+  background-image: url("https://t3.ftcdn.net/jpg/02/94/19/98/240_F_294199808_iVKkhLOnlSyGFnBXf15sFx9LEW6gF9en.jpg");
+  height:100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 html,
 body {
-   height: 100vh;
-   width: 100vw;
+  height:100%;
+  width:100%;
    padding: 0;
    margin: 0;
    background: #041F52;
@@ -10,10 +18,15 @@ body {
 }
 
 .wrapper {
-  height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 500px;
+  height: 500px;
+  margin: 75px auto;
+  text-align: center;
+  max-width: 500px;
 }
   #base {
     color: #E1E1E1;

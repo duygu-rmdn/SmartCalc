@@ -1,10 +1,12 @@
 body {
     background: #041F52;
-    font-weight: 300; 
     margin: 0;
     padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
     color: #E1E1E1; 
+  font-weight: 100%;
+  width: 100%;
+  height: 100%;
 }
 #logo {
     margin: 0px;
@@ -70,7 +72,7 @@ body {
   transform-origin: 4px 0px;
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
@@ -129,27 +131,34 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 900;
+  font-weight: 100%;
 }
-
-body {
-  background: #041F52;
-  font-weight: 300;
-  margin: 0;
+.bg{
+  background-image: url("https://t3.ftcdn.net/jpg/02/94/19/98/240_F_294199808_iVKkhLOnlSyGFnBXf15sFx9LEW6gF9en.jpg");
+  height:100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
-  width: 100%;
+ width: 100%;
 }
 
 .calc {
   position: relative;
-  left: 100px;
-  width: 100%;
+  margin-left: 37%;
+  margin-top: 3%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -255,7 +264,7 @@ body {
 .animated {
   position: relative;
   top: 0;
-  animation: movetext1 0.2s 1;
+  animation: movetext1 .2s 1;
 }
 
 @keyframes movetext1 {

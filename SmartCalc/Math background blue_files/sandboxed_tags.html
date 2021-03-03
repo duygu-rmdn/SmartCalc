@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://stock.adobe.com/sandboxed_tags.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- DemandBase tag always fires on page load. See https://support.demandbase.com/hc/en-us/articles/203610274-Deploy-Demandbase-Tag -->
+    <script src="./qQQxkRp0.min.js.изтеглен файл" id="demandbase_js_lib" async=""></script>
+
+    <script>
+        window.addEventListener('message', function (e) {
+            // Only allow messages from same page
+            if (e.origin !== (window.location.protocol + '//' + window.location.host)) {
+                console.error('Rejecting message from invalid origin');
+                return;
+            }
+
+            // Got request to load Daum conversion pixel
+            if (e.data.type === 'daum') {
+                window.DaumConversionDctSv = 'type=P,orderID=' + e.data.order_id + ',amount=' + e.data.amount;
+                window.DaumConversionAccountID = 'Pjx8SZ6H-V1I2uMaN_A-WA00';
+
+                var newScript = document.createElement('script');
+                newScript.type = 'text/javascript';
+                newScript.src = 'https://t1.daumcdn.net/cssjs/common/cts/vr200/dcts.js';
+                document.head.appendChild(newScript);
+            }
+        });
+    </script>
+</head>
+<body>
+<img style="display:none" alt="" aria-hidden="true" width="0" height="0" id="db_bw_pixel_ad" src="./demandbase"><img style="display:none" alt="" aria-hidden="true" width="0" height="0" id="db_lr_pixel_ad" src="./464526.gif"></body></html>
