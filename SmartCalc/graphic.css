@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
+    overflow: hidden;
 }
 
 .bg{
@@ -201,7 +202,7 @@ input[type="text"] {
 }
 #result {
   position: absolute;
-  margin-top:10px;
+  margin-top:3px;
   padding: 0 20px;
   overflow: hidden;
   right: 0px;

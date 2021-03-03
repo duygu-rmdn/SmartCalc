@@ -3,8 +3,8 @@
   background-image: url("https://t3.ftcdn.net/jpg/02/94/19/98/240_F_294199808_iVKkhLOnlSyGFnBXf15sFx9LEW6gF9en.jpg");
   height:100vh;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size:contain;
+  overflow: hidden;
 }
 html,
 body {
@@ -27,6 +27,10 @@ body {
   margin: 75px auto;
   text-align: center;
   max-width: 500px;
+  max-height: 500px;
+}
+#wrapp{
+  overflow: hidden;
 }
   #base {
     color: #E1E1E1;

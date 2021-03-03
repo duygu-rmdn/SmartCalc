@@ -4,9 +4,7 @@ body {
     padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
     color: #E1E1E1; 
-  font-weight: 100%;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
 }
 #logo {
     margin: 0px;
@@ -152,10 +150,11 @@ h4 {
 }
 
 .wrapper {
- width: 100%;
+  overflow: hidden;
 }
 
 .calc {
+  overflow: hidden;
   position: relative;
   margin-left: 37%;
   margin-top: 3%;
