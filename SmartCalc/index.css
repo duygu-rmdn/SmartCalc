@@ -1,17 +1,78 @@
-#heading {
+#head {
     width: 100%;
-    height: 194px;
-    background: linear-gradient(0.25turn,  #2e5984, #91bad6);
+    height: 300px;
+    background: linear-gradient(0.25turn,  #0f3e96, #175de3);
 }
 body {
     margin: 0;
     padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
 }
-#logo {
+#Sientific{
+  font-family: "Times New Roman", Times, serif;
+  float: left;
+  max-width: 600px;
+  font-size: 150%;
+  padding: 80px;
+}
+#contact{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 150%;
+  text-align: center;
+}
+
+#image1{
+  width: 45%;
+  border-radius: 50%;
+  padding: 50px;
+}
+#myImg{
+  width: 45%;
+  
+}
+#img1{
+  max-height: 30px;
+}
+
+
+.grid-container {
+  display: grid;
+  padding: 0px 70px;
+  grid-template-columns: 600px 600px;
+}
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-about {
+  background-color: #D3D3D3;
+  display: grid;
+  padding: 20px 70px;
+  grid-template-columns: 600px 600px;
+} 
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+}
+#text{
+  position: absolute;
+  text-align: center;
+    font-size: 220%;
+    top: 165px;
+    left: 35%;
     margin: 0px;
-    padding: 10px 80px;
     font-family: "Noto Sans HK", "Google", monospace;
+    color: #D3D3D3;
+}
+#logo {
+  position: absolute;
+    margin: 0px;
+    top: 45px;
+    left: 30%;
+    font-size: 720%;
+    font-family: "Noto Sans HK", "Google", monospace;
+    color: #ffbb00;
 }
 #menuToggle
 {
@@ -103,7 +164,7 @@ body {
 {
   position: absolute;
   width: 200px;
-  height: 800px;
+  height: 1200px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
