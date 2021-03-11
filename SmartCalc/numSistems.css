@@ -108,7 +108,6 @@ button:hover {
           text-transform: uppercase;
           text-align: center;
           background:  #0C2C69;
-          
         }
       
         #logo {
@@ -229,9 +228,12 @@ button:hover {
         transform: none;
         }
 
-@media screen and (max-height: 473px) {
+@media screen and (max-height: 630px) {
   .bg{
-    height: 473px;
+    height: 640px;
+    }
+    body{
+      overflow: auto;
     }
 }        
 @media screen and (max-width: 536px) {

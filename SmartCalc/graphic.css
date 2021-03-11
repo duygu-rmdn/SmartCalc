@@ -213,7 +213,7 @@ max-height: 0;
 -ms-transition: all 0.3s ease-out;
 -o-transition: all 0.3s ease-out;
 transition: all 0.3s ease-out;
- z-index: 1;
+ z-index: 0;
 }
 .solved #result {
 max-height: 2000px;
@@ -291,6 +291,14 @@ opacity: 0.7;
     .bg{
       height: 165vh;
     }
+    #box{
+      width: 300px;
+      left: 5%;
+      right: 5%;
+    }
+    #input{
+      width: 200px;
+    }
 }
 #instructions{
  left: 5%;
@@ -304,8 +312,15 @@ opacity: 0.7;
     left: 5%;
   }
 
-  @media screen and (max-height: 726px) {
+  @media screen and (max-height: 1000px) {
 .bg{
   height: 1250px;
 }
+#result {
+  height: 629px;
+  }
+  #ChangeClr{
+    top: 900px;
+    left: 5%;
+    }
   }
