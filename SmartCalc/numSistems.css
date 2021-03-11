@@ -13,7 +13,7 @@ body {
    padding: 0;
    margin: 0;
    background: #041F52;
-   font-family: "Avenir Next", "Avenir", sans-serif;
+   font-family: 'Montserrat', sans-serif;
    color: #E1E1E1;
    overflow: hidden;
 }
@@ -113,7 +113,7 @@ button:hover {
         #logo {
             margin: 0px;
             padding: 10px 80px;
-            font-family: "Noto Sans HK", "Google", monospace;
+            font-family: 'Montserrat', sans-serif;
         }
         #menuToggle
         {

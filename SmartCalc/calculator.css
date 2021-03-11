@@ -2,7 +2,7 @@ body {
   background: #041F52;
   margin: 0;
   padding: 0;
-  font-family: "Avenir Next", "Avenir", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #E1E1E1; 
 overflow: hidden;
 }
@@ -10,7 +10,7 @@ overflow: hidden;
   margin: 0px;
   padding: 10px 80px;
   color: #E1E1E1; 
-  font-family: "Noto Sans HK", "Google", monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 #menuToggle
 {
@@ -125,7 +125,7 @@ font-size: 22px;
 transform: none;
 }
 * {
-font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 box-sizing: border-box;
 }
 
