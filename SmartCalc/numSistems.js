@@ -50,7 +50,7 @@ function calculate(radix) {
         status = re.test(number);
         return status;
       case '16':
-        re = new RegExp('[0-9A-F]{' + number.length + '}');
+        re = new RegExp('[0-9A-Fa-f]{' + number.length + '}');
         status = re.test(number);
         return status;
     }

@@ -78,7 +78,7 @@ $(function() {
       addToExpression(')'.repeat(parentheses));
 
       try {
-        math.eval(expressionArray.join('')).toPrecision(20);
+        math.eval(expressionArray.join('')).toPrecision(12);
       } catch (e) {
         error = true;
       }
@@ -89,7 +89,7 @@ $(function() {
         writeToScreen('write', 'Syntax Error');
       } else {
         $('.result').html($('.screentext').html().replace(/Ans/, ans) + ')'.repeat(parentheses) + ' =');
-        ans = math.eval(expressionArray.join('')).toPrecision(20);
+        ans = math.eval(expressionArray.join('')).toPrecision(12);
         writeToScreen('write', ans.toString().replace(/(\.0+$)|(0+$)/g, ''));
         $('.hints').html('');
 
@@ -270,7 +270,7 @@ $(function() {
   // Insert a random number ---------------------------------------------------------
   $('.cbrnd').click(
     function() {
-      var key = Math.random().toPrecision(20);
+      var key = Math.random().toPrecision(8);
 
       if (inverted) {
         toggleInverted();
