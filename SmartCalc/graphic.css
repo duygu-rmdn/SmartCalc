@@ -304,3 +304,8 @@ opacity: 0.7;
     left: 5%;
   }
 
+  @media screen and (max-height: 726px) {
+.bg{
+  height: 1250px;
+}
+  }
