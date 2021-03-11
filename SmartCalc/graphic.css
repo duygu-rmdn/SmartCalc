@@ -297,9 +297,9 @@ opacity: 0.7;
       right: 5%;
     }
     #input{
-      width: 200px;
+      width: 210px;
     }
-}
+
 #instructions{
  left: 5%;
  }
@@ -311,7 +311,7 @@ opacity: 0.7;
     margin: 0;
     left: 5%;
   }
-
+}
   @media screen and (max-height: 1000px) {
 .bg{
   height: 1250px;
