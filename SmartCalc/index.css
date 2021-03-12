@@ -68,7 +68,7 @@ text-align: center;
 }
  
 .grid-about {
-background-color:  #D3D3D3;
+background-color: #ebebeb;
 display: grid;
 padding: 20px 70px;
 grid-template-columns: 40% 60%;

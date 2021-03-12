@@ -329,5 +329,9 @@ height: 875px;
 @media screen and (max-height: 750px) {
 .bg{
   height: 750px;
+  width: auto;
+}
+body{
+  overflow: auto;
 }
 }
