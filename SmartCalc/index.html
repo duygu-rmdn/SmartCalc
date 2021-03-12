@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta property="og:site_name" content="SmartCalc">
   <meta name="title" content="SmartCalc">
   <meta property="og:title" content="SmartCalc">
-  <meta property="og:description" content="An advanced online calculator for quick calculations with it's beautiful design and capabilities of displaying graphs and converting to other numeral systems.">
-  <meta name="keywords" content="SmartCalc, Calc, Calculator, Graphing, Numeral, Duygu, Graphic, Number, system, math, num, smartcalc, SmartCalc4">
+  <meta property="og:description"
+    content="An advanced online calculator for quick calculations with it's beautiful design and capabilities of displaying graphs and converting to other numeral systems.">
+  <meta name="keywords"
+    content="SmartCalc, Calc, Calculator, Graphing, Numeral, Duygu, Graphic, Number, system, math, num, smartcalc, SmartCalc4">
   <meta property="og:image" content="favicon.png">
   <meta property="og:url" content="https://smartcalc4.web.app/">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
-    <title>SmartCalc</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+  <title>SmartCalc</title>
 </head>
+
 <body>
   <div id="head">
-<h1 id="logo">SmartCalc</h1>
+    <h1 id="logo">SmartCalc</h1>
     <h1 id="text">"Calc smart, not hard"</h1>
-  <nav role="navigation">
+    <nav role="navigation">
       <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="index.html"><li>Home</li></a>
-          <a href="./calculator.html"><li>Scientific calculator</li></a>
-          <a href="./graphic.html"><li>Graphing calculator</li></a>
-          <a href="./numSistems.html"><li>Numeral system calculator</li></a>
-          <a href="#about"><li>About</li></a>
-          <a href="#contact"><li>Contact</li></a>
+          <a href="index.html" id="homePage">
+            <li>Home</li>
+          </a>
+          <a href="./calculator.html" id="ScientificPage">
+            <li>Scientific calculator</li>
+          </a>
+          <a href="./graphic.html" id="GraphingPage">
+            <li>Graphing calculator</li>
+          </a>
+          <a href="./numSistems.html" id="NumeralPage">
+            <li>Numeral system calculator</li>
+          </a>
+          <a href="#about" id="AboutPage">
+            <li>About</li>
+          </a>
+          <a href="#contact" id="ContactPage">
+            <li>Contact</li>
+          </a>
         </ul>
       </div>
     </nav>
   </div>
   <br>
   <div id="grids">
-<div class="grid-container">
-  <div class="grid-item"  id="description">Scientific calculator provides a calculator which not only does the functions of ordinary calculator but it also does scientific functions.</div>
-  <div class="grid-item" id="img1"><img id="image1" src="https://image.freepik.com/free-vector/calculator-concept-illustration_114360-1239.jpg"/>
-  </div>
-</div>
-<div class="grid-container">
-  <div class="grid-item" id="img1"><img id="image1" src="https://image.freepik.com/free-vector/balance-sheet-cartoon-web-icon-accounting-process-finance-analyst-calculating-tools-financial-consulting-idea-bookkeeping-service_335657-2313.jpg"/></div>
-  <div class="grid-item"  id="description">Numeral systems calculator provides a calculator, which converts numbers from one number system to another, depending on the customers choice.
-  </div>
-</div>
-<div class="grid-container">
-  <div class="grid-item"  id="description">Graphic calculator creates a graphic based on function provided. The colour of the function can differ depending on the clients choice. In the bottom right corner you will find an instruction which helps you to work with the graphing calculator.</div>
-  <div class="grid-item" id="img1"><img id="image3" src="https://image.freepik.com/free-vector/student-guy-studying-internet-watching-online-lecture-computer-talking-math-tutor-through-video-call-cartoon-illustration_74855-14524.jpg"/>
-  </div>
-</div>
+    <div class="grid-container">
+      <div class="grid-text" id="descriptionScientific">Scientific calculator provides a calculator which not only does
+        the functions of ordinary calculator but it also does scientific functions.</div>
+      <div class="grid-item" id="img1"><img id="image1"
+          src="https://image.freepik.com/free-vector/calculator-concept-illustration_114360-1239.jpg" />
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item" id="img1"><img id="image1"
+          src="https://image.freepik.com/free-vector/balance-sheet-cartoon-web-icon-accounting-process-finance-analyst-calculating-tools-financial-consulting-idea-bookkeeping-service_335657-2313.jpg" />
+      </div>
+      <div class="grid-text" id="descriptionNumeral">Numeral systems calculator provides a calculator, which converts
+        numbers from one number system to another, depending on the customers choice.
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-text" id="descriptionGraphic">Graphic calculator creates a graphic based on function provided.
+        The colour of the function can differ depending on the clients choice. In the bottom right corner you will find
+        an instruction which helps you to work with the graphing calculator.</div>
+      <div class="grid-item" id="img1"><img id="image3"
+          src="https://image.freepik.com/free-vector/student-guy-studying-internet-watching-online-lecture-computer-talking-math-tutor-through-video-call-cartoon-illustration_74855-14524.jpg" />
+      </div>
+    </div>
 
-<div class="grid-about" id="about">
-  <div class="grid-item" id="beforeText"><img id="myImg" src="https://i.ibb.co/JjZ2ZVn/me.jpg"/>
+    <div class="grid-about" id="about">
+      <div class="grid-item" id="beforeText"><img id="myImg" src="https://i.ibb.co/JjZ2ZVn/me.jpg" />
+      </div>
+      <div class="grid-item" id="descriptionAfter">Hello, I am Duygu Ramadan. I am 15 years old, my hometown is
+        Asenovgrad, now I am going on 9th grade in High School of Mathematics "Acad. Kiril Popov". I started programming
+        1 year ago and currently I am working on my several projects. My favorite programming languages are C#,
+        JavaScript, HTML, CSS.
+      </div>
+    </div>
   </div>
-  <div class="grid-item"  id="descriptionAfter">Hello, I am Duygu Ramadan. I am 15 years old, my hometown is Asenovgrad, now I am going on 9th grade in High School of Mathematics "Acad. Kiril Popov". I started programming 1 year ago and currently I am working on my several projects. My favorite programming languages are C#, JavaScript, HTML, CSS.
-  </div>
-</div>
-<p id="contact">Connect with me <a href="mailto:duygumetin99@gmail.com/">here </a></p></div>
+    <div id="contactbox">
+      <div id="contact">Connect with me
+      </div><div><a href="mailto:duygumetin99@gmail.com/" id="here">here </a></div>
+    </div>
+  
+
+  <button onclick="change()" id="myBtn">Try it</button>
+  <script src="index.js"></script>
 </body>
+
 </html>

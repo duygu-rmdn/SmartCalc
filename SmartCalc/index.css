@@ -5,13 +5,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow: auto;
 }
-#description{
+.grid-text{
   font-family: 'Montserrat', sans-serif;
 float: left;
 max-width: 600px;
 font-size: 20px;
 padding: 3%;
 margin: auto;
+text-align: center;
 }
 #descriptionAfter{
   font-family: 'Montserrat', sans-serif;
@@ -21,12 +22,19 @@ margin: auto;
   padding: 3%;
   margin: auto;
 }
+#here{
+  flex: 50%;
+  box-sizing: border-box;
+}
 #contact{
+  flex: 50%;
+  box-sizing: border-box;
+}
+ #contactbox{
   font-family: 'Montserrat', sans-serif;
 font-size: 150%;
 text-align: center;
-}
- 
+ }
 #image1{
   width: 260px;
 height: 260px;
@@ -215,7 +223,7 @@ transform: none;
 }
 
 @media screen and (max-width: 980px) {
-  #description{
+  .grid-text{
     padding: 1.5%;
     }
     .grid-container {
@@ -225,7 +233,7 @@ transform: none;
 
   
 @media screen and (max-width: 745px) {
-  #description{
+  .grid-text{
     grid-column-start: 1;
    grid-column-end: 1;
    grid-row-start: 1;
