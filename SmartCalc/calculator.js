@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
   var expression = '';
   var expressionArray = [];
@@ -69,7 +69,7 @@ $(function() {
 
   // ask for a result ----------------------------------------------------------
   $('.enter').click(
-    function() {
+    function () {
 
       if (ansOnScreen) {
         expressionArray = [ans];
@@ -108,14 +108,14 @@ $(function() {
 
   // clear the screen ----------------------------------------------------------
   $('.cbac').click(
-    function() {
+    function () {
       defaults();
     }
   );
 
   // add a number to the screen ------------------------------------------------
   $('.cbnum').click(
-    function() {
+    function () {
       var key = $(this).attr('key');
 
       if (inverted) {
@@ -135,7 +135,7 @@ $(function() {
 
   // add an operator to the screen if there's no other operator ----------------
   $('.cbop').click(
-    function() {
+    function () {
       var key = $(this).attr('key');
       var char = $(this).attr('char');
       if (inverted) {
@@ -171,7 +171,7 @@ $(function() {
 
   // add a parentheses both to screen and to a global var ----------------------
   $('.cbpar').click(
-    function() {
+    function () {
       var key = $(this).attr('key');
       if (inverted) {
         toggleInverted();
@@ -199,7 +199,7 @@ $(function() {
 
   // add a function, change parentheses ----------------------------------------
   $('.cbfun').click(
-    function() {
+    function () {
       var key1 = $(this).attr('key1');
       var key2 = $(this).attr('key2');
 
@@ -228,7 +228,7 @@ $(function() {
 
   // append the old result to the expression-----------------------------------------
   $('.cbans').click(
-    function() {
+    function () {
       if (ansOnScreen) {
         writeToScreen('write', '');
         ansOnScreen = false;
@@ -243,14 +243,14 @@ $(function() {
 
   // invert trig functions ----------------------------------------------------------
   $('.cbinv').click(
-    function() {
+    function () {
       toggleInverted();
     }
   );
 
   // backspace -----------------------------------------------------------------------
   $('.cbce').click(
-    function() {
+    function () {
       if (inverted) {
         toggleInverted();
       }
@@ -269,7 +269,7 @@ $(function() {
 
   // Insert a random number ---------------------------------------------------------
   $('.cbrnd').click(
-    function() {
+    function () {
       var key = Math.random().toPrecision(8);
 
       if (inverted) {
@@ -288,3 +288,4 @@ $(function() {
   );
 
 });
+

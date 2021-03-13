@@ -38,12 +38,12 @@ var texts = {
     descriptionAfter: "Hello, I am Duygu Ramadan. I am 15 years old, my hometown is Asenovgrad, now I am going on 9th grade in High School of Mathematics \"Acad. Kiril Popov\". I started programming 1 year ago and currently I am working on my several projects. My favorite programming languages are C#, JavaScript, HTML, CSS.",
     contact: "Connect with me ",
     here: "here",
-    homePage: "Home",
-    ScientificPage: "Scientific calculator",
-    GraphingPage: "Graphing calculator",
-    NumeralPage: "Numeral system calculator",
-    AboutPage: "About",
-    ContactPage: "Contact"
+    homePage: "Home<br><br>",
+    ScientificPage: "Scientific calculator<br><br>",
+    GraphingPage: "Graphing calculator<br><br>",
+    NumeralPage: "Numeral system calculator<br><br>",
+    AboutPage: "About<br><br>",
+    ContactPage: "Contact<br><br>"
 
   },
   bg: {
@@ -53,12 +53,12 @@ var texts = {
     descriptionAfter: "Здравейте, казвам се Дуйгу Рамадан. На 15 години съм, родом от град Асеновград, сега деветокласничка в МГ,,Акад. Кирил Попов”. Програмирам от една година и разработвам множество различни хоби проекти. Любимите ми програмни езици са C#, JavaScript, HTML, CSS.",
     contact: "Свържете се с мен ",
     here: "тук",
-    homePage: "Начало",
-    ScientificPage: "Научен калкулатор",
-    GraphingPage: "Графичен калкулатор",
-    NumeralPage: "Бройни системи?...",
-    AboutPage: "За нас",
-    ContactPage: "Контакти"
+    homePage: "Начало<br><br>",
+    ScientificPage: "Научен калкулатор<br><br>",
+    GraphingPage: "Графичен калкулатор<br><br>",
+    NumeralPage: "Бройни системи?...<br><br>",
+    AboutPage: "За нас<br><br>",
+    ContactPage: "Контакти<br><br>"
 
   }
 }
