@@ -228,6 +228,7 @@ button:hover {
         transform: none;
         }
 
+
 @media screen and (max-height: 630px) {
   .bg{
     height: 640px;

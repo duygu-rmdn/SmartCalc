@@ -9,15 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="calculator.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,greek' rel='stylesheet' type='text/css'>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/2.6.0/math.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/2.6.0/math.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   <title>SmartCalc</title>
+  <script src="script/scientLang.js"></script>
 </head>
 
-<body>
+<body onload="languageChange()">
   <div class="bg">
     <h1 id="logo">SmartCalc</h1>
     <nav role="navigation">
@@ -27,23 +26,23 @@
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="index.html" >
-            <li>Home</li>
+          <a href="index.html">
+            <li id="homePage">Home</li>
           </a>
           <a href="./calculator.html">
-            <li>Scientific calculator</li>
+            <li id="ScientificPage">Scientific calculator</li>
           </a>
           <a href="./graphic.html">
-            <li>Graphing calculator</li>
+            <li id="GraphingPage">Graphing calculator</li>
           </a>
           <a href="./numSistems.html">
-            <li>Numeral system calculator</li>
+            <li id="NumeralPage">Numeral system calculator</li>
           </a>
           <a href="index.html#about">
-            <li>About</li>
+            <li id="AboutPage">About</li>
           </a>
           <a href="index.html#contact">
-            <li>Contact</li>
+            <li id="ContactPage">Contact</li>
           </a>
         </ul>
       </div>
@@ -133,6 +132,7 @@
   </div>
   </div>
   <script src="./calculator.js"></script>
+ 
 </body>
 
 </html>

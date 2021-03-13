@@ -221,14 +221,7 @@ font-size: 22px;
 {
 transform: none;
 }
-#homePage, 
-#ScientificPage,
-#GraphingPage,
-#NumeralPage, 
-#AboutPage, 
-#ContactPage{
-  font-size: 22px;
-}
+
 
 @media screen and (max-width: 980px) {
   .grid-text{

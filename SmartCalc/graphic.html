@@ -1,52 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="graphic.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
-    <title>SmartCalc</title>
-    <script src="graphic.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="graphic.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+  <title>SmartCalc</title>
+  <script src="script/graphLang.js"></script>
+  
 </head>
+
 <body>
-  <div class="bg"> 
+  <div class="bg">
     <h1 id="logo">SmartCalc</h1>
-  <nav role="navigation">
+    <nav role="navigation">
       <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="index.html"><li>Home</li></a>
-          <a href="./calculator.html"><li>Scientific calculator</li></a>
-          <a href="./graphic.html"><li>Graphing calculator</li></a>
-          <a href="./numSistems.html"><li>Numeral system calculator</li></a>
-          <a href="index.html#about"><li>About</li></a>
-          <a href="index.html#contact"><li>Contact</li></a>
+          <a href="index.html">
+            <li id="homePage">Home</li>
+          </a>
+          <a href="./calculator.html">
+            <li id="ScientificPage">Scientific calculator</li>
+          </a>
+          <a href="./graphic.html">
+            <li id="GraphingPage">Graphing calculator</li>
+          </a>
+          <a href="./numSistems.html">
+            <li id="NumeralPage">Numeral system calculator</li>
+          </a>
+          <a href="index.html#about">
+            <li id="AboutPage">About</li>
+          </a>
+          <a href="index.html#contact">
+            <li id="ContactPage">Contact</li>
+          </a>
         </ul>
       </div>
     </nav>
     <div id="box">
-        <div id="top">
-              f(x) = <input type="text" value="(x+4)^2*(x-6)+60sinx" id="input" /></div>  </div>
-            <input type="button" value="Graph" id="simplify" />
-        <div id="wrapper">
-        <div id="result"></div>
-        <p id="ChangeClr">Change the color of the graphic here:</p><input type="color" value="#000000" id="clr" onchange="docolor()">
-         <div id ="instructions">
-         <ul>
-            <li>Addition (x+y)</li>
-            <li>Subtraction (x-y)</li>
-            <li>Multiplication (x*y or (x)(y))</li>
-            <li>Division (x/y)</li>
-            <li>Exponents (x^y or x^(1/y) for roots)</li>
-            <li>The following functions: sin, cos, tan, asin, acos, atan, abs</li>
-            <li>Single variable evaluation (include "x" in the expression string)</li>
+      <div id="top">
+        f(x) = <input type="text" value="(x+4)^2*(x-6)+60sinx" id="input" /></div>
+    </div>
+    <input type="button" value="Graph" id="simplify" />
+    <div id="wrapper">
+      <div id="result"></div>
+      <p id="ChangeClr">Change the color of the graphic here:</p><input type="color" value="#000000" id="clr"
+        onchange="docolor()">
+      <div id="instructions">
+        <ul>
+          <li>Addition (x+y)</li>
+          <li>Subtraction (x-y)</li>
+          <li>Multiplication (x*y or (x)(y))</li>
+          <li>Division (x/y)</li>
+          <li>Exponents (x^y or x^(1/y) for roots)</li>
+          <li>The following functions: sin, cos, tan, asin, acos, atan, abs</li>
+          <li>Single variable evaluation (include "x" in the expression string)</li>
         </ul>
-        </div></div></div>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="graphic.js"></script>
 </html>

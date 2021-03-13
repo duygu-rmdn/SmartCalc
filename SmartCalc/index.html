@@ -21,7 +21,7 @@
   <title>SmartCalc</title>
 </head>
 
-<body>
+<body onload="languageChange()">
   <div id="head">
     <h1 id="logo">SmartCalc</h1>
     <h1 id="text">"Calc smart, not hard"</h1>
@@ -32,23 +32,23 @@
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="index.html" id="homePage">
-            <li>Home</li>
+          <a href="index.html">
+            <li id="homePage">Home</li>
           </a>
-          <a href="./calculator.html" id="ScientificPage">
-            <li>Scientific calculator</li>
+          <a href="./calculator.html">
+            <li id="ScientificPage">Scientific calculator</li>
           </a>
-          <a href="./graphic.html" id="GraphingPage">
-            <li>Graphing calculator</li>
+          <a href="./graphic.html">
+            <li id="GraphingPage">Graphing calculator</li>
           </a>
-          <a href="./numSistems.html" id="NumeralPage">
-            <li>Numeral system calculator</li>
+          <a href="./numSistems.html">
+            <li id="NumeralPage">Numeral system calculator</li>
           </a>
-          <a href="#about" id="AboutPage">
-            <li>About</li>
+          <a href="#about">
+            <li id="AboutPage">About</li>
           </a>
-          <a href="#contact" id="ContactPage">
-            <li>Contact</li>
+          <a href="#contact">
+            <li id="ContactPage">Contact</li>
           </a>
         </ul>
       </div>
@@ -91,14 +91,13 @@
     </div>
   </div>
   <div id="contactbox">
-    <div id="contact">Connect with me
-    </div>
-    <div><a href="mailto:duygumetin99@gmail.com/" id="here">here </a></div>
+    <div id="contact">Connect with me</div>
+    <div><a href="mailto:duygumetin99@gmail.com/" id="here">here</a></div>
   </div>
 
 
   <button onclick="change()" id="myBtn">Try it</button>
-  <script src="index.js"></script>
+  <script src="script/lang.js"></script>
 </body>
 
 </html>
