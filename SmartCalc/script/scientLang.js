@@ -46,7 +46,6 @@ function change() {
 }
 var texts = {
   en: {
-    here: "here",
     homePage: "Home",
     ScientificPage: "Scientific calculator",
     GraphingPage: "Graphing calculator",

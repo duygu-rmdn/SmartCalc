@@ -17,6 +17,14 @@ function setBulgarian() {
 	document.getElementById("NumeralPage").innerHTML = texts["bg"].NumeralPage
 	document.getElementById("AboutPage").innerHTML = texts["bg"].AboutPage
 	document.getElementById("ContactPage").innerHTML = texts["bg"].ContactPage
+    document.getElementById("ChangeClr").innerHTML = texts["bg"].ChangeClr
+    document.getElementById("Addition").innerHTML = texts["bg"].Addition
+    document.getElementById("Subtraction").innerHTML = texts["bg"].Subtraction
+    document.getElementById("Multiplication").innerHTML = texts["bg"].Multiplication
+    document.getElementById("Division").innerHTML = texts["bg"].Division
+    document.getElementById("Exponents").innerHTML = texts["bg"].Exponents
+    document.getElementById("following").innerHTML = texts["bg"].following
+    document.getElementById("evaluation").innerHTML = texts["bg"].evaluation
 }
 	
 
@@ -42,18 +50,32 @@ function change() {
     document.getElementById("NumeralPage").innerHTML = texts["en"].NumeralPage
     document.getElementById("AboutPage").innerHTML = texts["en"].AboutPage
     document.getElementById("ContactPage").innerHTML = texts["en"].ContactPage
+    document.getElementById("ChangeClr").innerHTML = texts["en"].ChangeClr
+    document.getElementById("Addition").innerHTML = texts["en"].Addition
+    document.getElementById("Subtraction").innerHTML = texts["en"].Subtraction
+    document.getElementById("Multiplication").innerHTML = texts["en"].Multiplication
+    document.getElementById("Division").innerHTML = texts["en"].Division
+    document.getElementById("Exponents").innerHTML = texts["en"].Exponents
+    document.getElementById("following").innerHTML = texts["en"].following
+    document.getElementById("evaluation").innerHTML = texts["en"].evaluation
   }
 }
 var texts = {
   en: {
-    here: "here",
     homePage: "Home",
     ScientificPage: "Scientific calculator",
     GraphingPage: "Graphing calculator",
     NumeralPage: "Numeral system calculator",
     AboutPage: "About",
-    ContactPage: "Contact"
-
+    ContactPage: "Contact",
+    ChangeClr: "Change the color of the graphic here:",
+    Addition: "Addition (x+y)",
+    Subtraction: "Subtraction (x-y)",
+    Multiplication: "Multiplication (x*y or (x)(y))",
+    Division: "Division (x/y)",
+    Exponents: "Exponents (x^y or x^(1/y) for roots)",
+    following: "The following functions: sin, cos, tan, asin, acos, atan, abs",
+    evaluation: "Single variable evaluation (include \"x\" in the expression string)"
   },
   bg: {
     homePage: "Начало",
@@ -61,7 +83,13 @@ var texts = {
     GraphingPage: "Графичен калкулатор",
     NumeralPage: "Бройни системи?...",
     AboutPage: "За нас",
-    ContactPage: "Контакти"
-
+    ChangeClr: "Смени цвета на графиката от тук:",
+    Addition: "Събиране (x+y)",
+    Subtraction: "Изваждане (x-y)",
+    Multiplication: "Умножение (x*y или (x)(y))",
+    Division: "Деление (x/y)",
+    Exponents: "Експоненти (x^y или x^(1/y) за корени)",
+    following: "Функции: sin, cos, tan, asin, acos, atan, abs",
+    evaluation: "Съвет (включете \"x\" в низа на израза)"
   }
 }

@@ -14,7 +14,7 @@
   
 </head>
 
-<body>
+<body onload="languageChange()">
   <div class="bg">
     <h1 id="logo">SmartCalc</h1>
     <nav role="navigation">
@@ -56,17 +56,18 @@
         onchange="docolor()">
       <div id="instructions">
         <ul>
-          <li>Addition (x+y)</li>
-          <li>Subtraction (x-y)</li>
-          <li>Multiplication (x*y or (x)(y))</li>
-          <li>Division (x/y)</li>
-          <li>Exponents (x^y or x^(1/y) for roots)</li>
-          <li>The following functions: sin, cos, tan, asin, acos, atan, abs</li>
-          <li>Single variable evaluation (include "x" in the expression string)</li>
+          <li id="Addition">Addition (x+y)</li>
+          <li id="Subtraction">Subtraction (x-y)</li>
+          <li id="Multiplication">Multiplication (x*y or (x)(y))</li>
+          <li id="Division">Division (x/y)</li>
+          <li id="Exponents">Exponents (x^y or x^(1/y) for roots)</li>
+          <li id="following">The following functions: sin, cos, tan, asin, acos, atan, abs</li>
+          <li id="evaluation">Single variable evaluation (include "x" in the expression string)</li>
         </ul>
       </div>
     </div>
   </div>
-</body>
+
 <script src="graphic.js"></script>
+</body>
 </html>
