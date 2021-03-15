@@ -17,7 +17,7 @@ function setBulgarian() {
 	document.getElementById("NumeralPage").innerHTML = texts["bg"].NumeralPage
 	document.getElementById("AboutPage").innerHTML = texts["bg"].AboutPage
 	document.getElementById("ContactPage").innerHTML = texts["bg"].ContactPage
-    document.getElementById("ChangeClr").innerHTML = texts["bg"].ChangeClr
+  document.getElementById("ChangeClr").innerHTML = texts["bg"].ChangeClr
     document.getElementById("Addition").innerHTML = texts["bg"].Addition
     document.getElementById("Subtraction").innerHTML = texts["bg"].Subtraction
     document.getElementById("Multiplication").innerHTML = texts["bg"].Multiplication
@@ -83,13 +83,16 @@ var texts = {
     GraphingPage: "Графичен калкулатор",
     NumeralPage: "Бройни системи?...",
     AboutPage: "За нас",
+    ContactPage: "Контакти",
     ChangeClr: "Смени цвета на графиката от тук:",
     Addition: "Събиране (x+y)",
     Subtraction: "Изваждане (x-y)",
     Multiplication: "Умножение (x*y или (x)(y))",
     Division: "Деление (x/y)",
     Exponents: "Експоненти (x^y или x^(1/y) за корени)",
-    following: "Функции: sin, cos, tan, asin, acos, atan, abs",
+    following: "Функции:  sin, cos, tan, asin, acos, atan, abs ",
     evaluation: "Съвет (включете \"x\" в низа на израза)"
   }
 }
+
+languageChange() 
