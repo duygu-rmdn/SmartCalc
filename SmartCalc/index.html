@@ -25,7 +25,13 @@
   <div id="head">
     <h1 id="logo">SmartCalc</h1>
     <h1 id="text">"Calc smart, not hard"</h1>
-    <button onclick="change()" id="myBtn">Try it</button>
+    <div class="dropdown">
+      <div id="language"><img src="https://flags.fmcdn.net/data/flags/h20/gb.png" id="flag"><div id="abbreviation">en</div></div>
+      <div class="dropdown-content">
+        <a href="#" onclick="setEnglish()" class="myBtn">English</a><br>
+        <a href="#" onclick="setBulgarian()" class="myBtn">Български</a>
+      </div>
+    </div>
     <nav role="navigation">
       <div id="menuToggle">
         <input type="checkbox" />
@@ -92,8 +98,8 @@
     </div>
   </div>
   <div id="contactbox">
-    <div id="contact">Connect with me</div>
-    <div><a href="mailto:duygumetin99@gmail.com/" id="here">here</a></div>
+    <div id="contact">Connect with me <a href="mailto:duygumetin99@gmail.com/" id="here">here</a></div>
+   
   </div>
   <script src="script/lang.js"></script>
 </body>

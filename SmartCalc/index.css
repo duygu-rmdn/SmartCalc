@@ -4,17 +4,53 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow: auto;
 }
-#myBtn{
+.dropdown {
   position: absolute;
+  display: inline-block;
   right: 0px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2vw;
-  border-radius: 10%;
-  border: 3px;
-  background-color: #175de3;
-  border-color: #0f3e96;
-  border-style: solid;
+  padding-right: 0.1vh;
+  padding-top: 0.1vh;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #103d91;
+  min-width: 3vw;
+  width: 10vh;
+  height: 10vh;
+  z-index: 1;
+  top: 5vh;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.myBtn{
+  position: absolute;
+  left: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
+  border-radius: 10%;
+  border: 0px;
+  background-color: #0f3e96;
+  color: #D3D3D3;
+  text-align: right;
+  text-decoration: none;
+}
+.myBtn:hover {
+  background-color: #1346a3;
+}
+#language{
+  position: relative;
+  border: 2px;
+  border-style: solid;
+  border-radius: 10%;
+  margin-right: 1vw;
+  top: 1vw;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .grid-text{
   font-family: 'Montserrat', sans-serif;
 float: left;
@@ -39,6 +75,7 @@ text-align: center;
 #contact{
   flex: 50%;
   box-sizing: border-box;
+  margin-top: 2vh;
 }
  #contactbox{
   font-family: 'Montserrat', sans-serif;
