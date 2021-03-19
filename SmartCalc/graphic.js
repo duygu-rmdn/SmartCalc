@@ -672,17 +672,25 @@ function Graph(value, width, height, rangeX, rangeY) {
     var root = document.documentElement;
 
     // return relative mouse position
+   if(evt.changedTouches == undefined){
     var mouseX = evt.clientX - rect.left - root.scrollLeft;
     var mouseY = evt.clientY - rect.top - root.scrollTop;
-
+    }
+    else {
+     var mouseX = evt.changedTouches[0].clientX - rect.left - root.scrollLeft;
+    var mouseY = evt.changedTouches[0].clientY- rect.top - root.scrollTop;
+    }
     return new Point(mouseX, mouseY);
   }.bind(this);
 
   var startDrag = function (event) {
     document.addEventListener("mousemove", dragMouse, false);
     document.addEventListener("mouseup", endDrag, false);
-    this.canvas.removeEventListener("mouseover", startMouseOver, false);
     this.canvas.removeEventListener("mousemove", moveMouse, false);
+    this.canvas.removeEventListener("mouseover", startMouseOver, false);
+    document.addEventListener("touchmove", dragMouse, false);
+    document.addEventListener("touchend", endDrag, false);
+    this.canvas.removeEventListener("touchmove", moveMouse, false);
     startMouse = getMousePos(event);
   }.bind(this);
 
@@ -714,7 +722,11 @@ function Graph(value, width, height, rangeX, rangeY) {
   var endDrag = function (event) {
     document.removeEventListener("mousemove", dragMouse, false);
     document.removeEventListener("mouseup", endDrag, false);
+    this.canvas.addEventListener("mousemove", moveMouse, false);
+    document.removeEventListener("touchmove", dragMouse, false);
+    document.removeEventListener("touchend", endDrag, false);
     this.canvas.addEventListener("mouseover", startMouseOver, false);
+    this.canvas.addEventListener("touchmove", moveMouse, false);
     this.canvas.addEventListener("mousemove", moveMouse, false);
     mousePos = getMousePos(event);
 
@@ -724,6 +736,7 @@ function Graph(value, width, height, rangeX, rangeY) {
   }.bind(this);
 
   var startMouseOver = function (event) {
+    this.canvas.addEventListener("touchmove", moveMouse, false);
     this.canvas.addEventListener("mousemove", moveMouse, false);
     this.canvas.addEventListener("mouseout", endMouseOver, false);
   }.bind(this);
@@ -758,6 +771,7 @@ function Graph(value, width, height, rangeX, rangeY) {
   }.bind(this);
 
   var endMouseOver = function (event) {
+    this.canvas.removeEventListener("touchmove", moveMouse, false);
     this.canvas.removeEventListener("mousemove", moveMouse, false);
     this.canvas.removeEventListener("mouseout", endMouseOver, false);
     stage.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -780,6 +794,7 @@ function Graph(value, width, height, rangeX, rangeY) {
     //Make points
     this.update();
 
+    this.canvas.addEventListener("touchstart", startDrag, false);
     this.canvas.addEventListener("mousedown", startDrag, false);
     this.canvas.addEventListener("mouseover", startMouseOver, false);
   } else {

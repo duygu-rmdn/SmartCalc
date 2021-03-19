@@ -16,14 +16,14 @@ function setBulgarian() {
   document.getElementById("descriptionGraphic").innerHTML = texts["bg"].descriptionGraphic
   document.getElementById("descriptionAfter").innerHTML = texts["bg"].descriptionAfter
   document.getElementById("contact").innerHTML = texts["bg"].contact
-  /*document.getElementById("here").innerHTML = texts["bg"].here*/
+  document.getElementById("here").innerHTML = texts["bg"].here
   document.getElementById("homePage").innerHTML = texts["bg"].homePage
   document.getElementById("ScientificPage").innerHTML = texts["bg"].ScientificPage
   document.getElementById("GraphingPage").innerHTML = texts["bg"].GraphingPage
   document.getElementById("NumeralPage").innerHTML = texts["bg"].NumeralPage
   document.getElementById("AboutPage").innerHTML = texts["bg"].AboutPage
   document.getElementById("ContactPage").innerHTML = texts["bg"].ContactPage
-  /*document.getElementById("abbreviation").innerHTML = texts["bg"].abbreviation*/
+  document.getElementById("abbreviation").innerHTML = texts["bg"].abbreviation
   document.getElementById("flag").setAttribute("src", texts["bg"].flag)
   languageChange()
 }
@@ -34,7 +34,7 @@ function setEnglish() {
   document.getElementById("descriptionGraphic").innerHTML = texts["en"].descriptionGraphic
   document.getElementById("descriptionAfter").innerHTML = texts["en"].descriptionAfter
   document.getElementById("contact").innerHTML = texts["en"].contact
- /* document.getElementById("here").innerHTML = texts["en"].here*/
+  document.getElementById("here").innerHTML = texts["en"].here
   document.getElementById("homePage").innerHTML = texts["en"].homePage
   document.getElementById("ScientificPage").innerHTML = texts["en"].ScientificPage
   document.getElementById("GraphingPage").innerHTML = texts["en"].GraphingPage
@@ -84,7 +84,7 @@ var texts = {
     homePage: "Начало",
     ScientificPage: "Научен калкулатор",
     GraphingPage: "Графичен калкулатор",
-    NumeralPage: "Бройни системи?...",
+    NumeralPage: "Калкулатор за бройни системи",
     AboutPage: "За нас",
     ContactPage: "Контакти",
     abbreviation: "bg",

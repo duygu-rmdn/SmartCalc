@@ -81,7 +81,7 @@ var texts = {
     homePage: "Начало",
     ScientificPage: "Научен калкулатор",
     GraphingPage: "Графичен калкулатор",
-    NumeralPage: "Бройни системи?...",
+    NumeralPage: "Калкулатор за бройни системи",
     AboutPage: "За нас",
     ContactPage: "Контакти",
     ChangeClr: "Смени цвета на графиката от тук:",

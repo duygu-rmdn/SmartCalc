@@ -17,6 +17,9 @@ function setBulgarian() {
 	document.getElementById("NumeralPage").innerHTML = texts["bg"].NumeralPage
 	document.getElementById("AboutPage").innerHTML = texts["bg"].AboutPage
 	document.getElementById("ContactPage").innerHTML = texts["bg"].ContactPage
+  document.getElementById("radix").innerHTML = texts["bg"].radix
+  document.getElementById("enterNum").innerHTML = texts["bg"].enterNum
+  document.getElementById("output").innerHTML = texts["bg"].output
 }
 	
 
@@ -42,6 +45,9 @@ function change() {
     document.getElementById("NumeralPage").innerHTML = texts["en"].NumeralPage
     document.getElementById("AboutPage").innerHTML = texts["en"].AboutPage
     document.getElementById("ContactPage").innerHTML = texts["en"].ContactPage
+    document.getElementById("radix").innerHTML = texts["en"].radix
+    document.getElementById("enterNum").innerHTML = texts["en"].enterNum
+    document.getElementById("output").innerHTML = texts["en"].output
   }
 }
 var texts = {
@@ -51,16 +57,20 @@ var texts = {
     GraphingPage: "Graphing calculator",
     NumeralPage: "Numeral system calculator",
     AboutPage: "About",
-    ContactPage: "Contact"
-
+    ContactPage: "Contact",
+    radix: "Enter Base/Radix",
+    enterNum: "Enter Number",
+    output: "Output: "
   },
   bg: {
     homePage: "Начало",
     ScientificPage: "Научен калкулатор",
     GraphingPage: "Графичен калкулатор",
-    NumeralPage: "Бройни системи?...",
+    NumeralPage: "Калкулатор за бройни системи",
     AboutPage: "За нас",
-    ContactPage: "Контакти"
-
+    ContactPage: "Контакти",
+    radix: "Въведи база",
+    enterNum: "Въведи число",
+    output: "Резултат: "
   }
 }

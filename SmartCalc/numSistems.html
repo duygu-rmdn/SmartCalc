@@ -50,7 +50,7 @@
         <div class="card">
           <form name="convertor" id="convertor">
             <div class="form-group">
-              <label for="base">Enter Base/Radix</label>
+              <label for="base" id="radix">Enter Base/Radix</label>
             </div>
             <div>
               <select id="base" list="radix">
@@ -61,7 +61,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="num">Enter Number</label>
+              <label for="num" id="enterNum">Enter Number</label>
             </div>
             <input type="text" id="num" />
             <div class="form-group">
@@ -71,7 +71,7 @@
               <button type="button" onclick="calculate('16')">Hexadecimal</button>
             </div>
             <div class="out">
-              Output: <input name="result" id="result" disabled></input>
+              <span id="output">Output: </span><input name="result" id="result" disabled></input>
             </div>
           </form>
         </div>
