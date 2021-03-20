@@ -1,3 +1,13 @@
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
 function readCookie(name) {
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
@@ -11,6 +21,8 @@ function readCookie(name) {
 
 
 function setBulgarian() {
+  createCookie('language','bulgarian',14)
+  
   document.getElementById("descriptionScientific").innerHTML = texts["bg"].descriptionScientific
   document.getElementById("descriptionNumeral").innerHTML = texts["bg"].descriptionNumeral
   document.getElementById("descriptionGraphic").innerHTML = texts["bg"].descriptionGraphic
@@ -25,10 +37,11 @@ function setBulgarian() {
   document.getElementById("ContactPage").innerHTML = texts["bg"].ContactPage
   document.getElementById("abbreviation").innerHTML = texts["bg"].abbreviation
   document.getElementById("flag").setAttribute("src", texts["bg"].flag)
-  languageChange()
 }
 
 function setEnglish() {
+  createCookie('language','english',14)
+  
   document.getElementById("descriptionScientific").innerHTML = texts["en"].descriptionScientific
   document.getElementById("descriptionNumeral").innerHTML = texts["en"].descriptionNumeral
   document.getElementById("descriptionGraphic").innerHTML = texts["en"].descriptionGraphic
@@ -43,7 +56,6 @@ function setEnglish() {
   document.getElementById("ContactPage").innerHTML = texts["en"].ContactPage
   document.getElementById("abbreviation").innerHTML = texts["en"].abbreviation
   document.getElementById("flag").setAttribute("src", texts["en"].flag)
-  languageChange()
 }
 
 function languageChange() {
