@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <title>Document</title>
+    <script scr="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+    <link href="login.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="modal">
+    <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="./../../index.html">
+              <li id="homePage">Home</li>
+            </a>
+            <a href="./../../calculator.html">
+              <li id="ScientificPage">Scientific calculator</li>
+            </a>
+            <a href="./../../graphic.html">
+              <li id="GraphingPage">Graphing calculator</li>
+            </a>
+            <a href="./../../numSistems.html">
+              <li id="NumeralPage">Numeral system calculator</li>
+            </a>
+            <a href="./../../index.html#about">
+              <li id="AboutPage">About</li>
+            </a>
+            <a href="./../../index.html#contact">
+              <li id="ContactPage">Contact</li>
+            </a>
+            <a href="login.html">
+              <li id="LogIn">LogIn</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    <script src="loginform.js"></script>
+        
+        <div class="loginform">
+            <h1>SmartCalc</h1>
+            <input id="Email" type="email" placeholder="Email" required>
+            <input id="Password" type="password" placeholder="Password" required>
+            <div class="bottomel">
+                <button id="btnLogin"  class="btn btn-action">Log in</button>
+                <button id="btnSignUp"  class="btn btn-secondary">Sign up</button>
+                <button id="btnLogout"  class="btn btn-action hide">Log out</button>
+            </div>
+        </div>
+       </div>
+    <script src="login.js"></script>
+
+</body>
+</html>

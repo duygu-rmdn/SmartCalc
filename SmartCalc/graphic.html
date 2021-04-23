@@ -12,7 +12,13 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   <title>SmartCalc</title>
   
-  
+  <script scr="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
   
 </head>
 
@@ -44,6 +50,9 @@
           <a href="index.html#contact">
             <li id="ContactPage">Contact</li>
           </a>
+          <a href="Log/logindesign/login.html">
+            <li id="LogIn">LogIn</li>
+          </a>
         </ul>
       </div>
     </nav>
@@ -52,6 +61,10 @@
         f(x) = <input type="text" value="(x+4)^2*(x-6)+60sinx" id="input" /></div>
     </div>
     <input type="button" value="Graph" id="simplify" />
+    <input type="button" value="Save"id="save"/>
+    <input type="button" value="Favorites" id="favorites"/>
+    <div id="saved"></div>
+    <!--<button onclick="save()">Save</button> -->
     <div id="wrapper">
       <div id="result"></div>
       <p id="ChangeClr">Change the color of the graphic here:</p><input type="color" value="#000000" id="clr"
@@ -71,5 +84,8 @@
   </div>
 <script src="graphic.js"></script>
 <script src="script/graphLang.js"></script>
+<script src="script/save.js"></script>
+<script src="Log/logindesign/savePrintForm.js"></script>
+
 </body>
 </html>

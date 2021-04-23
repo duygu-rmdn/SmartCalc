@@ -153,6 +153,25 @@ width: 375px;
 left: 60px;
 background: #041F52;
 }
+#saved{
+overflow: auto;
+max-height: 150px;
+ position: absolute;
+ left: 60px;
+ top: 230px;
+ width: 390px;
+ background: #041F52;
+ max-width: 95vw;
+}
+#saved>button{
+width: 100%;
+text-align: left;
+background-color: #072a69;
+color: white;
+border: none;
+cursor: pointer;
+}
+
 #instructions{
  position: absolute;
 left: 60px;
@@ -245,21 +264,32 @@ background-color: #6B1010;
 padding: 10px;
 opacity: 0.7;
 }
-
+#save{
+  left: 160px;
+  display: none;
+}
+#favorites{
+  left: 260px;
+  display: none;
+}
 @media screen and (max-width: 1355px) {
+  #saved{
+    left: 10px;
+    max-width: 77vw;
+  }
   #result {
-    margin-top:150px;
+    margin-top:350px;
     margin-left: 0%;
     }
     #ChangeClr{
-    margin-top: 475px;
+    margin-top: 675px;
     margin-left: 2%;
     }
     #instructions{
-      top: 1000px;
+      top: 1200px;
    }
    #clr{
-      top: 945px;
+      top: 1145px;
     }
     body {
       overflow: auto;
@@ -272,20 +302,20 @@ opacity: 0.7;
 
 @media screen and (max-width: 916px) {
   #result {
-    margin-top:150px;
+    margin-top:350px;
     width: 90%;
     height: 90%;
     padding: 5px;
     }
     #ChangeClr{
-    top: 900px;
+    top: 1100px;
     left: 5%;
     }
     #instructions{
-      top: 1000px;
+      top: 1200px;
    }
    #clr{
-      top: 945px;
+      top: 1145px;
       left: 5%;
     }
     body {
@@ -317,7 +347,7 @@ opacity: 0.7;
 }
   @media screen and (max-height: 1000px) {
 .bg{
-  height: 1250px;
+  height: 1411px;
 }
 #result {
   height: 629px;

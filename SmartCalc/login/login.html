@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <title>Document</title>
+    <script scr="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <input id="txtEmail" type="email" placeholder="Email">
+        <input id="txtPassword" type="password" placeholder="Password">
+        <button id="btnLogin" class="btn btn-action">
+            Log in
+        </button>
+        <button id="btnSignUp" class="btn btn-secondary">
+            Sign up
+        </button>
+        <button id="btnLogout" class="btn btn-action hide">
+            Log out
+        </button>
+        <br>
+        <input type="text" id="inputBlock"/>
+        <button id="btnSave" class="btn btn-action hide">
+            save
+        </button>
+        <button id="btnPrint" class="btn btn-action hide">
+            print
+        </button>
+        <div id="result"></div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
