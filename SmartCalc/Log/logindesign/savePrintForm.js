@@ -1,4 +1,4 @@
-
+var isContains = 0;
 var globalUser = null;
 var config = {
     apiKey: "AIzaSyD9s6_129jQg84_kbWCZJTFKt4zfqnSp-A",
@@ -19,20 +19,33 @@ const input = document.getElementById('input');
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
-
         globalUser = firebaseUser;
     } else {
-
         globalUser = null;
     }
 })
 
 btnSave.addEventListener('click', e => {
     if (globalUser) {
-        db.collection('users/' + globalUser.uid + '/favourites').add({
-            txt: input.value
-        })
+        db.collection('users/' + globalUser.uid + '/favourites').get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                if (doc.data().txt === input.value) {
+                    isContains += 2;
+                }
+
+            });
+        
+        if (isContains == 0) {
+            db.collection('users/' + globalUser.uid + '/favourites').add({
+                txt: input.value
+            })
+            isContains = 4
+        } else {
+            isContains = 4
+        }
+    })
     }
+
 });
 
 btnPrint.addEventListener('click', e => {
@@ -45,7 +58,7 @@ btnPrint.addEventListener('click', e => {
             db.collection('users/' + globalUser.uid + '/favourites').get().then((querySnapshot) => {
                 var row = '';
                 querySnapshot.forEach((doc) => {
-                    row += `<button onclick="Paste('${doc.data().txt}')">${doc.data().txt}</button><br/>`;
+                    row += `<button style="width:89%" onclick="Paste('${doc.data().txt}')">${doc.data().txt}</button>|<button style="width:8%" onclick="Delete('${doc.data().txt}')">X</button><br/>`;
                 });
                 saved.innerHTML = row;
                 saved.style.padding = "10px";
@@ -53,6 +66,15 @@ btnPrint.addEventListener('click', e => {
         }
     }
 });
+function Delete(x) {
+    db.collection('users/' + globalUser.uid + '/favourites').get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            if (doc.data().txt === x) {
+                db.collection("users/" + globalUser.uid + "/favourites").doc(doc.id).delete()              
+            }
+        })
+    })
+}
 function Paste(x) {
     input.value = x;
     clearFav();

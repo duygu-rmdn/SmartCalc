@@ -26,38 +26,43 @@ btnLogin.addEventListener('click', e => {
   const auth = firebase.auth();
   //Sign in 
   const promise = auth.signInWithEmailAndPassword(email, pass)
-  promise.catch(e => alert(e.message))
-
+  promise.catch(e => alert(e.message))  
 });
+
 btnSignUp.addEventListener('click', e => {
   //Get Email and Password
   //Check for real emails
+
   const email = Email.value;
   const pass = Password.value;
   const auth = firebase.auth();
   //Sign in 
-  auth.createUserWithEmailAndPassword(email, pass)
-    .then(u => {
-      var user = u.user;
-      //console.log(user)
-      db.collection("users").doc(user.uid).set({
-        uid: user.uid,
-        email: user.email,
-        name: user.displayName
-      }).then(() => {
-        //console.log("Document written with ID: ", user.uid);
+  if (pass.length < 6) {
+    alert("Password must be at least 6 characters")
+  } else {
+    auth.createUserWithEmailAndPassword(email, pass)
+      .then(u => {
+        var user = u.user;
+        //console.log(user)
+        db.collection("users").doc(user.uid).set({
+          uid: user.uid,
+          email: user.email,
+          name: user.displayName
+        }).then(() => {
+          //console.log("Document written with ID: ", user.uid);
+        })
+          .catch((error) => {
+            console.log("heloooooooooo")
+            alert(error.message)
+            //console.error("Error adding document: ", error);
+          });
       })
-        .catch((error) => {
-          //console.error("Error adding document: ", error);
-        });
-    })
-    .catch(e => {
-      if(e.code === "auth/invalid-email"){
-        alert("invalid email")
-      }
-    })
-    
-
+      .catch(e => {
+        if (e.code === "auth/invalid-email") {
+          alert("invalid email")
+        }
+      })
+  }
 });
 
 btnLogout.addEventListener('click', e => {
@@ -67,7 +72,7 @@ btnLogout.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
     //console.log(firebaseUser)
-    btnLogout.classList.remove('hide')    
+    btnLogout.classList.remove('hide')
     btnLogout.style.display = "block";
     globalUser = firebaseUser;
   } else {
@@ -79,6 +84,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 })
 
 
-function Paste(x){
+function Paste(x) {
   inputBlock.value = x;
 }
