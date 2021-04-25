@@ -41,7 +41,7 @@ btnSave.addEventListener('click', e => {
             })
             isContains = 4
         } else {
-            isContains = 4
+            isContains = 0
         }
     })
     }
