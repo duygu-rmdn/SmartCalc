@@ -43,11 +43,10 @@ btnSignUp.addEventListener('click', e => {
   if (pass.length < 6) {
     alert("Password must be at least 6 characters")
   } else {
-
-    auth.createUserWithEmailAndPassword(email, pass)
-      .then(u => {
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise.catch(e => alert(e.message))
+    promise.then(u => {
         var user = u.user;
-
         db.collection("users").doc(user.uid).set({
           uid: user.uid,
           email: user.email,
@@ -59,7 +58,6 @@ btnSignUp.addEventListener('click', e => {
           }, 2000);
         })
           .catch((error) => {
-            console.log("heloooooooooo")
             alert(error.message)
           });
       })
