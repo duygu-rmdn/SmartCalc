@@ -26,12 +26,15 @@ btnLogin.addEventListener('click', e => {
   const auth = firebase.auth();
   //Sign in 
   const promise = auth.signInWithEmailAndPassword(email, pass)
-  promise.catch(e => alert(e.message))  
+  promise.then(() => {
+    $('div.loggedIn').css("display", "block")
+    setTimeout(function () {
+      $('div.loggedIn').css("display", "none");
+    }, 2000);
+  }).catch(e => alert(e.message))
 });
 
 btnSignUp.addEventListener('click', e => {
-  //Get Email and Password
-  //Check for real emails
 
   const email = Email.value;
   const pass = Password.value;
@@ -40,21 +43,24 @@ btnSignUp.addEventListener('click', e => {
   if (pass.length < 6) {
     alert("Password must be at least 6 characters")
   } else {
+
     auth.createUserWithEmailAndPassword(email, pass)
       .then(u => {
         var user = u.user;
-        //console.log(user)
+
         db.collection("users").doc(user.uid).set({
           uid: user.uid,
           email: user.email,
           name: user.displayName
         }).then(() => {
-          //console.log("Document written with ID: ", user.uid);
+          $('div.singUp').css("display", "block");
+          setTimeout(function () {
+            $('div.singUp').css("display", "none");
+          }, 2000);
         })
           .catch((error) => {
             console.log("heloooooooooo")
             alert(error.message)
-            //console.error("Error adding document: ", error);
           });
       })
       .catch(e => {
@@ -67,16 +73,18 @@ btnSignUp.addEventListener('click', e => {
 
 btnLogout.addEventListener('click', e => {
   firebase.auth().signOut()
+  $('div.loggedOut').css("display", "block");
+  setTimeout(function () {
+    $('div.loggedOut').css("display", "none");
+  }, 2000);
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
-    //console.log(firebaseUser)
     btnLogout.classList.remove('hide')
     btnLogout.style.display = "block";
     globalUser = firebaseUser;
   } else {
-    //console.log('not logged in')
     btnLogout.classList.add('hide')
     btnLogout.style.display = "none";
     globalUser = null;
@@ -87,3 +95,5 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 function Paste(x) {
   inputBlock.value = x;
 }
+
+

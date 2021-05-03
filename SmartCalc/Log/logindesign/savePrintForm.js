@@ -34,16 +34,20 @@ btnSave.addEventListener('click', e => {
                 }
 
             });
-        
-        if (isContains == false) {
-            db.collection('users/' + globalUser.uid + '/favourites').add({
-                txt: input.value
-            })
-            isContains = true
-        } else {
-            isContains = false
-        }
-    })
+
+            if (isContains == false) {
+                db.collection('users/' + globalUser.uid + '/favourites').add({
+                    txt: input.value
+                })
+                $('div.saveFunc').css("display", "block");
+                setTimeout(function () {
+                    $('div.saveFunc').css("display", "none");
+                }, 2000);
+                isContains = true
+            } else {
+                isContains = false
+            }
+        })
     }
 
 });
@@ -70,7 +74,11 @@ function Delete(x) {
     db.collection('users/' + globalUser.uid + '/favourites').get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             if (doc.data().txt === x) {
-                db.collection("users/" + globalUser.uid + "/favourites").doc(doc.id).delete()              
+                db.collection("users/" + globalUser.uid + "/favourites").doc(doc.id).delete()
+                $('div.removeFunc').css("display", "block");
+                setTimeout(function () {
+                    $('div.removeFunc').css("display", "none");
+                }, 2000);
             }
         })
     })

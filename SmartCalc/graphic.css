@@ -4,7 +4,20 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
-
+.successfulMess{
+  position: absolute;
+  margin: auto;
+  background: #09184a;
+  text-align: center;
+  color: white;
+  font-size: 23px;
+  z-index: 4;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding: 3px;
+  border-radius: 10%;
+  top: 12px;
+}
 .bg{
   background-image: url("https://t3.ftcdn.net/jpg/02/94/19/98/240_F_294199808_iVKkhLOnlSyGFnBXf15sFx9LEW6gF9en.jpg");
   height:100vh;
@@ -164,7 +177,7 @@ max-height: 150px;
  max-width: 95vw;
 }
 #saved>button{
-width: 100%;
+/*width: 100%;*/
 text-align: left;
 background-color: #072a69;
 color: white;
