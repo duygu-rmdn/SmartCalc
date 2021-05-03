@@ -1,4 +1,4 @@
-var isContains = 0;
+var isContains = false;
 var globalUser = null;
 var config = {
     apiKey: "AIzaSyD9s6_129jQg84_kbWCZJTFKt4zfqnSp-A",
@@ -30,18 +30,18 @@ btnSave.addEventListener('click', e => {
         db.collection('users/' + globalUser.uid + '/favourites').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 if (doc.data().txt === input.value) {
-                    isContains += 2;
+                    isContains += true;
                 }
 
             });
         
-        if (isContains == 0) {
+        if (isContains == false) {
             db.collection('users/' + globalUser.uid + '/favourites').add({
                 txt: input.value
             })
-            isContains = 4
+            isContains = true
         } else {
-            isContains = 0
+            isContains = false
         }
     })
     }
