@@ -31,6 +31,10 @@ btnLogin.addEventListener('click', e => {
     setTimeout(function () {
       $('div.loggedIn').css("display", "none");
     }, 2000);
+    var btnSignUpToHide = document.getElementById("btnSignUp");
+    var btnLogInToHide = document.getElementById("btnLogin");
+    btnSignUpToHide.style.display = "none";
+    btnLogInToHide.style.display = "none";
   }).catch(e => alert(e.message))
 });
 
@@ -46,21 +50,25 @@ btnSignUp.addEventListener('click', e => {
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(e => alert(e.message))
     promise.then(u => {
-        var user = u.user;
-        db.collection("users").doc(user.uid).set({
-          uid: user.uid,
-          email: user.email,
-          name: user.displayName
-        }).then(() => {
-          $('div.singUp').css("display", "block");
-          setTimeout(function () {
-            $('div.singUp').css("display", "none");
-          }, 2000);
-        })
-          .catch((error) => {
-            alert(error.message)
-          });
+      var user = u.user;
+      db.collection("users").doc(user.uid).set({
+        uid: user.uid,
+        email: user.email,
+        name: user.displayName
+      }).then(() => {
+        $('div.singUp').css("display", "block");
+        setTimeout(function () {
+          $('div.singUp').css("display", "none");
+        }, 2000);
+        var btnSignUpToHide = document.getElementById("btnSignUp");
+        var btnLogInToHide = document.getElementById("btnLogin");
+        btnSignUpToHide.style.display = "none";
+        btnLogInToHide.style.display = "none";
       })
+        .catch((error) => {
+          alert(error.message)
+        });
+    })
       .catch(e => {
         if (e.code === "auth/invalid-email") {
           alert("invalid email")
@@ -75,12 +83,20 @@ btnLogout.addEventListener('click', e => {
   setTimeout(function () {
     $('div.loggedOut').css("display", "none");
   }, 2000);
+  var btnSignUpToHide = document.getElementById("btnSignUp");
+  var btnLogInToHide = document.getElementById("btnLogin");
+  btnSignUpToHide.style.display = "block";
+  btnLogInToHide.style.display = "block";
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
     btnLogout.classList.remove('hide')
     btnLogout.style.display = "block";
+    var btnSignUpToHide = document.getElementById("btnSignUp");
+    var btnLogInToHide = document.getElementById("btnLogin");
+    btnSignUpToHide.style.display = "none";
+    btnLogInToHide.style.display = "none";
     globalUser = firebaseUser;
   } else {
     btnLogout.classList.add('hide')
