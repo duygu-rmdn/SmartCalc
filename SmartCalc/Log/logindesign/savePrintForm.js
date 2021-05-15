@@ -30,7 +30,7 @@ btnSave.addEventListener('click', e => {
         db.collection('users/' + globalUser.uid + '/favourites').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 if (doc.data().txt === input.value) {
-                    isContains += true;
+                    isContains = true;
                 }
 
             });
